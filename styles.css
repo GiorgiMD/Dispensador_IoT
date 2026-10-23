@@ -159,6 +159,7 @@ body {
   position: absolute;
   inset: 0 0 auto 0;
   height: 5px;
+  background: var(--accent);
   background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 55%, white));
 }
 
@@ -214,6 +215,7 @@ body {
   font-size: 0.98rem;
   color: #14122b;
   cursor: pointer;
+  background: var(--accent);
   background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 70%, #ffd166));
   box-shadow: 0 8px 18px color-mix(in srgb, var(--accent) 40%, transparent);
   transition: transform 0.12s ease, filter 0.12s ease;

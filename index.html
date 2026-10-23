@@ -2,38 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="LAS CHUCHESCOM · Máquina expendedora de dulces ESCOMCHUCHES. Cada producto cuesta $5 MXN." />
-  <title>LAS CHUCHESCOM · Máquina expendedora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="ESCOMCHUCHES · Máquina expendedora de dulces. Todos los productos a $5 MXN." />
+  <meta name="theme-color" content="#0b3a6f" />
+  <title>ESCOMCHUCHES · Máquina expendedora</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app">
     <header class="header">
-      <img
-        class="header__logo"
-        src="assets/logo.png"
-        alt="Mascota ESCOM · LAS CHUCHESCOM"
-      />
-      <h1 class="header__title">LAS <span>CHUCHESCOM</span></h1>
-      <p class="header__tagline">
-        Tu máquina expendedora de dulces · Todos los productos a <strong>$5 MXN</strong>
-      </p>
+      <img class="header__bg" src="assets/header.jpg" alt="Mascota ESCOM comiendo dulces" />
+      <div class="header__scrim" aria-hidden="true"></div>
+      <div class="header__content">
+        <h1 class="header__title">ESCOM<span class="chuch">CHUCHES</span></h1>
+        <p class="header__subtitle">Escuela Superior de Chuches</p>
+      </div>
     </header>
 
-    <main class="machine" aria-label="Catálogo de productos">
-      <div class="machine__glass">
-        <div class="products" id="products" role="list"></div>
-      </div>
-      <div class="machine__tray" aria-hidden="true">
-        <span class="machine__tray-icon">🛒</span>
-        <span class="machine__tray-text">Selecciona un producto para comprarlo</span>
-      </div>
+    <main class="main">
+      <p class="main__hint">Toca un producto para comprarlo · Todo a <strong>$5 MXN</strong></p>
+      <div class="products" id="products" role="list"></div>
     </main>
 
-    <footer class="footer">
-      <p>ESCOMCHUCHES · Dispensador IoT</p>
-    </footer>
+    <footer class="footer">ESCOMCHUCHES · Dispensador IoT</footer>
   </div>
 
   <!-- Thank-you overlay -->

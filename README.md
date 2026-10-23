@@ -1,12 +1,12 @@
-# LAS CHUCHESCOM 🍬
+# ESCOMCHUCHES 🍬
 
-Interfaz de usuario (UI/UX) para la máquina expendedora **LAS CHUCHESCOM** del
-proyecto **Dispensador IoT** (ESCOM).
+Interfaz de usuario (UI/UX) para la **máquina expendedora de dulces** del
+proyecto **Dispensador IoT** (ESCOM), optimizada para **tablet Android**
+(interacción táctil y diseño responsive).
 
 ## Descripción
 
-Interfaz de máquina expendedora de dulces con catálogo de **5 productos**, todos
-a un precio de **$5 MXN**:
+Máquina expendedora con catálogo de **5 productos**, todos a **$5 MXN**:
 
 | # | Producto            | Precio |
 |---|---------------------|--------|
@@ -20,29 +20,56 @@ Al completar una compra se muestra el mensaje de agradecimiento:
 
 > **¡Gracias por tu compra! Disfruta tu ESCOMCHUCHE.**
 
+## Branding
+
+- **Título:** ESCOMCHUCHES
+- **Subtítulo:** Escuela Superior de Chuches
+- **Header:** arte de `ESCOM_IA.jpg` (mascota ESCOM "Burrito" en estilo IA),
+  escalado 2× y con detalles de dulces añadidos, manteniendo el esquema de
+  color azul oficial de ESCOM.
+
 ## Estructura
 
 ```
 Dispensador_IoT/
-├── index.html        # Estructura de la interfaz
-├── styles.css        # Estilos y animaciones (UI/UX)
-├── app.js            # Catálogo y flujo de compra
+├── index.html          # Estructura de la interfaz
+├── styles.css          # Estilos, animaciones y responsive (tablet-first)
+├── app.js              # Catálogo y flujo de compra
 ├── assets/
-│   └── logo.png      # Logo ESCOM mejorado (escalado + estilizado)
-└── Dispensador.sql   # Esquema de base de datos (existente)
+│   ├── header.jpg      # Arte del header (mascota + dulces, 2560×1382)
+│   └── logo.png        # Logo ESCOM mejorado (escalado + estilizado)
+└── Dispensador.sql     # Esquema de base de datos (existente)
 ```
 
-## Cómo ejecutar
+## Cómo ejecutar / probar
 
-Es una aplicación web estática: solo abre `index.html` en un navegador, o
-sírvela con cualquier servidor estático, por ejemplo:
+Es una aplicación web estática (HTML + CSS + JS). Opciones:
 
 ```bash
+# 1) Servidor local simple (desde la carpeta del repo)
 npx serve .
+# 2) O con Python
+python -m http.server 8080
 ```
 
-## Branding
+### En una tablet Android
 
-- Título de la app: **LAS CHUCHESCOM**
-- Logo basado en `BURRITO.png` (mascota ESCOM), mejorado en resolución y
-  estilizado tomando como referencia `ESCOM_IA.jpg`.
+1. Copia la carpeta a un servidor o súbela a un hosting estático (Vercel,
+   GitHub Pages, Netlify, etc.).
+2. Abre la URL desde el navegador de la tablet (Chrome/Edge).
+3. Toca cualquier producto ("Comprar") y verifica el modal
+   *"¡Gracias por tu compra! Disfruta tu ESCOMCHUCHE."*.
+
+### En un emulador Android
+
+1. Crea un AVD (Android Studio → Device Manager) o usa un emulador web de
+   tablet.
+2. Abre Chrome en el emulador y navega a la URL (o `http://10.0.2.2:8080`
+   para acceder al `localhost` de la máquina host).
+3. Gira a horizontal (landscape) para ver el layout de 5 columnas.
+
+### Vista previa rápida (navegador de escritorio)
+
+1. Abre `index.html` directamente o sírvelo con `npx serve .`.
+2. Activa las **DevTools** (F12) → *Toggle device toolbar* → elige una tablet
+   (ej. **iPad Air** o **Samsung Galaxy Tab**) para simular el viewport táctil.

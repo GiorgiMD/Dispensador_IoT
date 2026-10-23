@@ -73,3 +73,28 @@ python -m http.server 8080
 1. Abre `index.html` directamente o sírvelo con `npx serve .`.
 2. Activa las **DevTools** (F12) → *Toggle device toolbar* → elige una tablet
    (ej. **iPad Air** o **Samsung Galaxy Tab**) para simular el viewport táctil.
+
+## Publicar en GitHub Pages
+
+El repositorio ya está listo para GitHub Pages:
+
+- `.nojekyll` → evita el procesado de Jekyll.
+- `.github/workflows/pages.yml` → despliega automáticamente el contenido
+  estático en cada push a `main`.
+
+### Activar (una sola vez, requiere permisos de administrador del repo)
+
+1. Ve a **Settings → Pages** del repositorio.
+2. En **Source**, elige **GitHub Actions**.
+3. El workflow ya se habrá ejecutado; si no, haz un push o lanza
+   *Deploy static content to Pages* desde la pestaña **Actions**.
+
+El sitio quedará disponible en:
+
+```
+https://giorgimd.github.io/Dispensador_IoT/
+```
+
+> Alternativa sin Actions: en **Settings → Pages**, elige
+> **Deploy from a branch** → `main` → carpeta `/ (root)` y guarda.
+
